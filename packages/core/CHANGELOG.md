@@ -1,5 +1,15 @@
 # @better-auth/core
 
+## 1.7.3
+
+### Patch Changes
+
+- [#11068](https://github.com/better-auth/better-auth/pull/11068) [`157ec8d`](https://github.com/better-auth/better-auth/commit/157ec8d8799ddda642f2fe40120fc364660a8864) Thanks [@bytaesu](https://github.com/bytaesu)! - Improve request IP validation performance.
+
+- [#10969](https://github.com/better-auth/better-auth/pull/10969) [`6a0a7cb`](https://github.com/better-auth/better-auth/commit/6a0a7cbcb18c9801c1570eab9cc1c6c729bb4c14) Thanks [@gustavovalverde](https://github.com/gustavovalverde)! - The CLI now generates new Better Auth configurations with `account: { identityStrategy: "provider-id" }`. Configurations that omit `account.identityStrategy` remain compatible with Better Auth v1.7 by using issuer identity and emit a one-time warning with migration guidance. `providerId` remains the configured connection, `accountId` remains the provider subject, and the required `issuer` field stores either the verified authority under `"issuer"` or a deterministic provider namespace under `"provider-id"`; both strategies retain the unique `(issuer, accountId)` index.
+
+- [#10966](https://github.com/better-auth/better-auth/pull/10966) [`ba4840f`](https://github.com/better-auth/better-auth/commit/ba4840fbdf24cbc16bf9bef0cf3aab0a5fd8cfc9) Thanks [@gustavovalverde](https://github.com/gustavovalverde)! - SQL migration tooling can now inspect and apply migrations through Drizzle and Prisma adapters. Migration queries share the adapter's configured dialect and transaction boundary, and schema inspection respects physical table and column names from Drizzle metadata and Prisma `@map` declarations.
+
 ## 1.7.2
 
 ### Patch Changes
